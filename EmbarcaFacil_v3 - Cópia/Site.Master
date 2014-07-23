@@ -1,0 +1,209 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="EmbarcaFacil_v3.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<![if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Embarca Fácil - Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
+    
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link href="css/css.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" media="screen, projection" />
+    <link rel="stylesheet" href="css/about.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/contact.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/sign-in.css" type="text/css" media="screen" />
+     <link rel="stylesheet" href="css/sign-up.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/pricing.css" type="text/css" media="screen" />
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="pull_top">
+
+    <form id="Form1" runat="server">
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+
+
+                    <a class="brand" href="Index.aspx">
+                        <strong style="text-align: left;">EMBARCA FÁCIL</strong>
+
+                        <div style="text-align: right;">
+                            <asp:LoginView ID="Login" runat="server" ViewStateMode="Disabled">
+                                <AnonymousTemplate>
+                                    <ul>
+                                        <a style="padding: 10px;" id="registerLink" runat="server" href="~/Register.aspx">Registro</a>
+                                        <a id="loginLink" runat="server" href="~/Login.aspx">Login</a>
+                                    </ul>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <p>
+                                        <a id="A1" runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                            <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
+                                        </a>!
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Logoff" LogoutPageUrl="~/Login.aspx" />
+                                    </p>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+
+
+                    </a>
+                    <div style="text-align: right;" class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li><a href="Index.aspx" class="active">HOME</a></li>
+                            <li><a href="About.aspx">ABOUT </a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVIÇOS
+                            <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="features.html">Gerador de relatórios</a></li>
+                                    <li><a href="services.html">Rastreamento</a></li>
+                                    <li><a href="portfolio.html">Controle de ocorrências</a></li>
+                                    <li><a href="portfolio-item.html">Módulo cotaçâo motoristas</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="Pricing.aspx">PLANOS</a></li>
+                            <li><a href="Pricing.aspx">BLOG</a></li>
+                            <li><a href="Contact.aspx">CONTATO</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- starts footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row sections">
+                    <div class="span4 recent_posts">
+                        <h3 class="footer_header">A empresa
+                        </h3>
+                        <div class="post">
+                            <a href="blogpost.html">
+                                <img src="img/recent_post1.png" class="img-circle" />
+                            </a>
+                            <div class="date">
+                                G.D.I.Gestão, desenvolvimento e inovação
+                            </div>
+                            <a href="blogpost.html" class="title">Desenvolvimento de softwares web.
+                            </a>
+                        </div>
+                        <div class="post">
+                            <a href="blogpost.html">
+                                <img src="img/recent_post2.png" class="img-circle" />
+                            </a>
+                            <div class="date">
+                                Plataforma Embarca Fácil
+                            </div>
+                            <a href="blogpost.html" class="title">Desenvolvido em 2013.
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4 testimonials">
+                        <h3 class="footer_header">Testemunhos
+                        </h3>
+                        <div class="wrapper">
+                            <div class="quote">
+                                <span>“</span>
+                                Parabéns! Continuem com o mesmo empenho e apoio que tem dado até à data. Aconselhamos a vossa empresa a futuros Clientes. "
+                            <span></span>
+                            </div>
+                            <div class="author">
+                                <img src="img/user-display.png" />
+                                <div class="name">Hélder Silva Servifone</div>
+                                <div class="info">
+                                    Diretor
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 contact">
+                        <h3 class="footer_header">Contato
+                        </h3>
+                        
+                            <input type="text" placeholder="Seu nome" />
+                            <input type="text" placeholder="Seu e-mail" />
+                            <textarea rows="3" placeholder="Mensagem"></textarea>
+                            <input type="submit" value="Enviar" />
+                       
+                    </div>
+                </div>
+                <div class="row credits">
+                    <div class="span12">
+                        <div class="row social">
+                            <div class="span12">
+                                <a href="#" class="facebook">
+                                    <span class="socialicons ico1"></span>
+                                    <span class="socialicons_h ico1h"></span>
+                                </a>
+                                <a href="#" class="twitter">
+                                    <span class="socialicons ico2"></span>
+                                    <span class="socialicons_h ico2h"></span>
+                                </a>
+                                <a href="#" class="gplus">
+                                    <span class="socialicons ico3"></span>
+                                    <span class="socialicons_h ico3h"></span>
+                                </a>
+                                <%--<a href="#" class="flickr">
+                                    <span class="socialicons ico4"></span>
+                                    <span class="socialicons_h ico4h"></span>
+                                </a>
+                                <a href="#" class="pinterest">
+                                    <span class="socialicons ico5"></span>
+                                    <span class="socialicons_h ico5h"></span>
+                                </a>
+                                <a href="#" class="dribble">
+                                    <span class="socialicons ico6"></span>
+                                    <span class="socialicons_h ico6h"></span>
+                                </a>
+                                <a href="#" class="behance">
+                                    <span class="socialicons ico7"></span>
+                                    <span class="socialicons_h ico7h"></span>
+                                </a>--%>
+                            </div>
+                        </div>
+                        <div class="row copyright">
+                            <div class="span12">
+                                © 2013 Embarca Fácil. Todos os direitos reservados.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    <!-- Scripts -->
+    <script src="js/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="text/javascript" src="js/flexslider.js"></script>
+    <script type="text/javascript" src="js/index-slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{76DD8CD2-2A45-49C4-B022-4E71CBE8F806}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EmbarcaFacil_v3</RootNamespace>
+    <AssemblyName>EmbarcaFacil_v3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EmbarcaFacil_v3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EmbarcaFacil_v3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="About.aspx" />
+    <Content Include="Application\Autonomo\CalendarioAutonomo.aspx" />
+    <Content Include="Application\Autonomo\DashboardAutonomo.aspx" />
+    <Content Include="Application\css\ace-responsive.min.css" />
+    <Content Include="Application\css\ace-skins.min.css" />
+    <Content Include="Application\css\ace.min.css" />
+    <Content Include="Application\css\bootstrap-responsive.min.css" />
+    <Content Include="Application\css\bootstrap.css" />
+    <Content Include="Application\css\bootstrap.min.css" />
+    <Content Include="Application\css\css.css" />
+    <Content Include="Application\css\font-awesome.min.css" />
+    <Content Include="Application\css\fullcalendar.css" />
+    <Content Include="Application\css\jquery.gritter.css" />
+    <Content Include="Application\Embarcador\CalendarioEmbarcador.aspx" />
+    <Content Include="Application\Embarcador\Cotacao.aspx" />
+    <Content Include="Application\Embarcador\DashboardEmbarcador.aspx" />
+    <Content Include="Application\img\avatar.png" />
+    <Content Include="Application\img\avatar3.png" />
+    <Content Include="Application\img\avatar4.png" />
+    <Content Include="Application\img\glyphicons-halflings-white.png" />
+    <Content Include="Application\img\glyphicons-halflings.png" />
+    <Content Include="Application\img\glyphicons_003_user.png" />
+    <Content Include="Application\img\glyphicons_030_pencil.png" />
+    <Content Include="Application\img\glyphicons_041_charts.png" />
+    <Content Include="Application\img\glyphicons_045_calendar.png" />
+    <Content Include="Application\img\glyphicons_057_history.png" />
+    <Content Include="Application\img\glyphicons_129_message_new.png" />
+    <Content Include="Application\img\glyphicons_135_inbox_out.png" />
+    <Content Include="Application\img\glyphicons_136_cogwheel.png" />
+    <Content Include="Application\img\glyphicons_150_edit.png" />
+    <Content Include="Application\img\glyphicons_244_conversation.png" />
+    <Content Include="Application\img\glyphicons_245_chat.png" />
+    <Content Include="Application\img\glyphicons_259_barcode.png" />
+    <Content Include="Application\img\glyphicons_331_dashboard.png" />
+    <Content Include="Application\img\user.jpg" />
+    <Content Include="Application\js\ace-elements.min.js" />
+    <Content Include="Application\js\ace.min.js" />
+    <Content Include="Application\js\bootbox.min.js" />
+    <Content Include="Application\js\bootstrap.min.js" />
+    <Content Include="Application\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Application\js\FormDinamico.js" />
+    <Content Include="Application\js\fullcalendar.min.js" />
+    <Content Include="Application\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Application\js\jquery.easy-pie-chart.min.js" />
+    <Content Include="Application\js\jquery.gritter.min.js" />
+    <Content Include="Application\js\jquery.min.js" />
+    <Content Include="Application\js\jquery.slimscroll.min.js" />
+    <Content Include="Application\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Application\js\jquery.validate.js" />
+    <Content Include="Application\js\spin.min.js" />
+    <Content Include="Application\Quotation.aspx" />
+    <Content Include="Application\Transportador\CalendarioTransportador.aspx" />
+    <Content Include="Application\Transportador\DashboardTransportador.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="css\about.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-overrides.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\contact.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\googlefonts.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\pricing.css" />
+    <Content Include="css\sign-in.css" />
+    <Content Include="css\sign-up.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="ForgotPasswordMessage.aspx" />
+    <Content Include="Verify.aspx" />
+    <Content Include="EmailTemplates\ForgotPassword.htm" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="img\about_slide1.jpg" />
+    <Content Include="img\ale.png" />
+    <Content Include="img\design.png" />
+    <Content Include="img\develop.png" />
+    <Content Include="img\face.png" />
+    <Content Include="img\formmail.png" />
+    <Content Include="img\formname.png" />
+    <Content Include="img\formphone.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\gplus.png" />
+    <Content Include="img\Graac.png" />
+    <Content Include="img\ocean.jpg" />
+    <Content Include="img\plan.png" />
+    <Content Include="img\slide1.png" />
+    <Content Include="img\sociocaio.jpg" />
+    <Content Include="img\sociopaulo.jpg" />
+    <Content Include="img\socioricardo.jpg" />
+    <Content Include="img\twt.png" />
+    <Content Include="js\flexslider.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ForgotPasswordInfo.aspx" />
+    <Content Include="EmailTemplates\NewAccountTemplate.htm" />
+    <Content Include="Global.asax" />
+    <Content Include="img\aqua.jpg" />
+    <Content Include="img\badge.png" />
+    <Content Include="img\bullet.png" />
+    <Content Include="img\client1.png" />
+    <Content Include="img\client2.png" />
+    <Content Include="img\client3.png" />
+    <Content Include="img\css3.png" />
+    <Content Include="img\desktop.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\features-ico1.png" />
+    <Content Include="img\features-ico2.png" />
+    <Content Include="img\features-ico3.png" />
+    <Content Include="img\fundo.jpg" />
+    <Content Include="img\html5.png" />
+    <Content Include="img\indigo.jpg" />
+    <Content Include="img\ipad.png" />
+    <Content Include="img\iphone.png" />
+    <Content Include="img\landscape.png" />
+    <Content Include="img\left.png" />
+    <Content Include="img\logomail.png" />
+    <Content Include="img\macbook.png" />
+    <Content Include="img\middle.png" />
+    <Content Include="img\recent_post1.png" />
+    <Content Include="img\recent_post2.png" />
+    <Content Include="img\service1.png" />
+    <Content Include="img\service2.png" />
+    <Content Include="img\service3.png" />
+    <Content Include="img\showcase1.png" />
+    <Content Include="img\showcase2.png" />
+    <Content Include="img\showcase3.png" />
+    <Content Include="img\socialicons.png" />
+    <Content Include="img\user-display.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\bootstrap-alert.js" />
+    <Content Include="js\bootstrap-button.js" />
+    <Content Include="js\bootstrap-carousel.js" />
+    <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="js\bootstrap-dropdown.js" />
+    <Content Include="js\bootstrap-modal.js" />
+    <Content Include="js\bootstrap-popover.js" />
+    <Content Include="js\bootstrap-scrollspy.js" />
+    <Content Include="js\bootstrap-tab.js" />
+    <Content Include="js\bootstrap-tooltip.js" />
+    <Content Include="js\bootstrap-transition.js" />
+    <Content Include="js\bootstrap-typeahead.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\holder.js" />
+    <Content Include="js\index-slider.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\theme.js" />
+    <Content Include="Pricing.aspx" />
+    <Content Include="RegisterInfo.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Autonomo\Autonomo.Master.designer.vb">
+      <DependentUpon>Autonomo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Autonomo\Autonomo.Master.vb">
+      <DependentUpon>Autonomo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Autonomo\CalendarioAutonomo.aspx.designer.vb">
+      <DependentUpon>CalendarioAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Autonomo\CalendarioAutonomo.aspx.vb">
+      <DependentUpon>CalendarioAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Autonomo\DashboardAutonomo.aspx.designer.vb">
+      <DependentUpon>DashboardAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Autonomo\DashboardAutonomo.aspx.vb">
+      <DependentUpon>DashboardAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Embarcador\CalendarioEmbarcador.aspx.designer.vb">
+      <DependentUpon>CalendarioEmbarcador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Embarcador\CalendarioEmbarcador.aspx.vb">
+      <DependentUpon>CalendarioEmbarcador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Embarcador\Cotacao.aspx.designer.vb">
+      <DependentUpon>Cotacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Embarcador\Cotacao.aspx.vb">
+      <DependentUpon>Cotacao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Embarcador\DashboardEmbarcador.aspx.designer.vb">
+      <DependentUpon>DashboardEmbarcador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Embarcador\DashboardEmbarcador.aspx.vb">
+      <DependentUpon>DashboardEmbarcador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Embarcador\Embarcador.Master.designer.vb">
+      <DependentUpon>Embarcador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Embarcador\Embarcador.Master.vb">
+      <DependentUpon>Embarcador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Painel.Master.designer.vb">
+      <DependentUpon>Painel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Painel.Master.vb">
+      <DependentUpon>Painel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Quotation.aspx.designer.vb">
+      <DependentUpon>Quotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Quotation.aspx.vb">
+      <DependentUpon>Quotation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Transportador\CalendarioTransportador.aspx.designer.vb">
+      <DependentUpon>CalendarioTransportador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Transportador\CalendarioTransportador.aspx.vb">
+      <DependentUpon>CalendarioTransportador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Transportador\DashboardTransportador.aspx.designer.vb">
+      <DependentUpon>DashboardTransportador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Transportador\DashboardTransportador.aspx.vb">
+      <DependentUpon>DashboardTransportador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Application\Transportador\Transportador.Master.designer.vb">
+      <DependentUpon>Transportador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Transportador\Transportador.Master.vb">
+      <DependentUpon>Transportador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cls\clsDB.vb" />
+    <Compile Include="cls\clsGDI.vb" />
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordMessage.aspx.designer.vb">
+      <DependentUpon>ForgotPasswordMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordMessage.aspx.vb">
+      <DependentUpon>ForgotPasswordMessage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Verify.aspx.designer.vb">
+      <DependentUpon>Verify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Verify.aspx.vb">
+      <DependentUpon>Verify.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordInfo.aspx.designer.vb">
+      <DependentUpon>ForgotPasswordInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordInfo.aspx.vb">
+      <DependentUpon>ForgotPasswordInfo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pricing.aspx.designer.vb">
+      <DependentUpon>Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pricing.aspx.vb">
+      <DependentUpon>Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RegisterInfo.aspx.designer.vb">
+      <DependentUpon>RegisterInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterInfo.aspx.vb">
+      <DependentUpon>RegisterInfo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application\Painel.Master" />
+    <Content Include="Application\Autonomo\Autonomo.Master" />
+    <Content Include="Application\Embarcador\Embarcador.Master" />
+    <Content Include="Application\Transportador\Transportador.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53379</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3348/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

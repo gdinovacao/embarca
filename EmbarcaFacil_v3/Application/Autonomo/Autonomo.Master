@@ -1,0 +1,978 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Autonomo.master.vb" Inherits="EmbarcaFacil_v3.Autonomo" %>
+
+<!DOCTYPE html>
+
+    <%--[if IE 7]> <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" /><![endif]--%>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Embarca Fácil</title>
+
+    <meta name="description" content="Embarca fácil - Cotações de fretes online" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--basic styles-->
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/fullcalendar.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+   
+    <!--pagina de cotação-->
+    
+    <!-------------------------------------->
+
+    <link rel="stylesheet" href="../js/jquery-ui-1.10.3.custom.min.js" />
+    <link rel="stylesheet" href="../css/jquery.gritter.css" />
+
+    <!--fonts-->
+
+    <link rel="stylesheet" href="../css/css.css" />
+
+    <!--ace styles-->
+
+    <link rel="stylesheet" href="../css/ace.min.css" />
+    <link rel="stylesheet" href="../css/ace-responsive.min.css" />
+    <link rel="stylesheet" href="../css/ace-skins.min.css" />
+
+    <!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!--inline styles if any-->
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a href="#" class="brand">
+                    <small>
+                        <%--<i class="icon-leaf"></i>--%>
+                        Administração - Embarcador
+                    </small>
+                </a>
+                <!--/.brand-->
+
+                <ul class="nav ace-nav pull-right">
+                    <li class="grey">
+                        <%-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="icon-tasks"></i>
+                            <span class="badge badge-grey">4</span>
+                        </a>--%>
+
+                        <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+                           
+                        </ul>
+                    </li>
+
+                    <li class="purple">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img src="../img/glyphicons_030_pencil.png" style="width:15px; height:15px" alt="mmu01" />
+                            <%--<i class="icon-bell-alt icon-only icon-animated-bell"></i>--%>
+                            <span class="badge badge-important">8</span>
+                        </a>
+
+                        <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-closer">
+                            <li class="nav-header">
+                                 
+                                <i class="icon-warning-sign"></i>
+                                8 Notificações
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <span class="pull-left">
+                                            <i class="btn btn-mini no-hover btn-pink icon-comment"></i>
+                                            Novos comentários
+                                        </span>
+                                        <span class="pull-right badge badge-info">+12</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <%--<li>
+                                <a href="#">
+                                    <i class="btn btn-mini btn-primary icon-user"></i>
+                                    Bob just signed up as an editor ...
+                                </a>
+                            </li>--%>
+
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <span class="pull-left">
+                                            <i class="btn btn-mini no-hover btn-success icon-shopping-cart"></i>
+                                            Novas cotações
+                                        </span>
+                                        <span class="pull-right badge badge-success">+8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <span class="pull-left">
+                                            <i class="btn btn-mini no-hover btn-info icon-twitter"></i>
+                                            Seguidores
+                                        </span>
+                                        <span class="pull-right badge badge-info">+11</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">Todas as notificações
+										<i class="icon-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="green">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img src="../img/glyphicons_129_message_new.png" style="width:15px; height:15px" alt="mmu01" />
+                            <%--<i class="icon-envelope-alt icon-only icon-animated-vertical"></i>--%>
+                            <span class="badge badge-success">5</span>
+                        </a>
+
+                        <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+                            <li class="nav-header">
+                                
+                                <i class="icon-envelope"></i>
+                                5 Mensagens
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="../img/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                                    <span class="msg-body">
+                                        <span class="msg-title">
+                                            <span class="blue">Alex:</span>
+                                            Olá, Fechei uma ótima cotação para nossa filial
+                                        </span>
+
+                                        <span class="msg-time">
+                                            <i class="icon-time"></i>
+                                            <span>1 minuto</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="../img/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+                                    <span class="msg-body">
+                                        <span class="msg-title">
+                                            <span class="blue">Susan:</span>
+                                            Obrigado por nos avisar, vamos tentar com o mesmo transportador
+                                        </span>
+
+                                        <span class="msg-time">
+                                            <i class="icon-time"></i>
+                                            <span>20 minutos</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="../img/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+                                    <span class="msg-body">
+                                        <span class="msg-title">
+                                            <span class="blue">Bob:</span>
+                                            Me passa o telefone do alfredo
+                                        </span>
+
+                                        <span class="msg-time">
+                                            <i class="icon-time"></i>
+                                            <span>3:15 horas</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">Ver todas as mensagens
+										<i class="icon-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="light-blue user-profile">
+                        <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                            <img class="nav-user-photo" src="../img/user.jpg" alt="Jason's Photo" />
+                            <span id="user_info">
+                                <small>Bem vindo,</small>
+                                Jason
+                            </span>
+
+                            <i class="icon-caret-down"></i>
+                        </a>
+
+                        <ul class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer" id="user_menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-cog"></i>
+                                    Configuração
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i>
+                                    Perfil
+                                </a>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon-off"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--/.ace-nav-->
+            </div>
+            <!--/.container-fluid-->
+        </div>
+        <!--/.navbar-inner-->
+    </div>
+
+    <div class="container-fluid" id="main-container">
+        <a id="menu-toggler" href="#">
+            <span></span>
+        </a>
+
+        <div id="sidebar">
+            <div id="sidebar-shortcuts">
+                <div id="sidebar-shortcuts-large">
+                    <button class="btn btn-small btn-success">
+                        <%--<i class="icon-signal"></i>--%>
+                    <img src="../img/glyphicons_041_charts.png" style="width:15px; height:15px" alt="mmu01" />
+                    </button>
+
+                    <button class="btn btn-small btn-info">
+                        <img src="../img/glyphicons_030_pencil.png" style="width:15px; height:15px"   alt="mmu02" />    
+                        <%--<i class="icon-pencil"></i>--%>
+                    </button>
+
+                    <button class="btn btn-small btn-warning">
+                        <img src="../img/glyphicons_003_user.png" style="width:15px; height:15px" alt="mmu03" />    
+                        <%--<i class="icon-group"></i>--%>
+                    </button>
+
+                    <button class="btn btn-small btn-danger">
+                        <img src="../img/glyphicons_136_cogwheel.png" style="width:15px; height:15px" alt="mmu04" />    
+                        <%--<i class="icon-cogs"></i>--%>
+                    </button>
+                </div>
+
+                <div id="sidebar-shortcuts-mini">
+                    <span class="btn btn-success"></span>
+
+                    <span class="btn btn-info"></span>
+
+                    <span class="btn btn-warning"></span>
+
+                    <span class="btn btn-danger"></span>
+                </div>
+            </div>
+            <!--#sidebar-shortcuts-->
+
+            <ul class="nav nav-list">
+                <li>
+                    <a href="Dashboard.aspx">
+                        <img src="../img/glyphicons_331_dashboard.png" alt="mmu05" />
+                        <%--<i class="icon-dashboard"></i>--%>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Quotation.aspx">
+                        <img src="../img/glyphicons_150_edit.png" alt="mmu06" />
+                        <%--<i class="icon-text-width"></i>--%>
+                        <span>Realizar Cotações</span>
+                    </a>
+                </li>
+
+                <li <%--class="active open"--%>>
+                    <a href="#" class="dropdown-toggle">
+                        <img src="../img/glyphicons_135_inbox_out.png" alt="mmu07" />
+                        <%--<i class="icon-desktop"></i>--%>
+                        <span>Cadastros</span>
+
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+
+                    <ul class="submenu">
+                        <li class="active">
+                            <a href="RegisterEmbarcador.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Embarcador
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="RegisterTransportador.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Transportador
+                            </a>
+                        </li>
+
+                       <li>
+                            <a href="RegisterAutonomos.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Autônomo
+                            </a>
+                       </li>
+                    </ul>
+                </li>
+
+
+
+
+
+
+                <%--<li>
+                    <a href="tables.html">
+                        <i class="icon-list"></i>
+                        <span>desabilitado</span>
+                    </a>
+                </li>--%>
+
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <img src="../img/glyphicons_259_barcode.png" alt="mmu08" />
+                        <%--<i class="icon-edit"></i>--%>
+                        <span>Relatórios</span>
+
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="form-elements.html">
+                                <i class="icon-double-angle-right"></i>
+                                Cotações realizadas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="form-wizard.html">
+                                <i class="icon-double-angle-right"></i>
+                                Cotações reprovadas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="wysiwyg.html">
+                                <i class="icon-double-angle-right"></i>
+                                Cotações Aguardando
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="widgets.html">
+                         <img src="../img/glyphicons_244_conversation.png" alt="mmu09" />
+                        <%--<i class="icon-list-alt"></i>--%>
+                        <span>Mensagens</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="CalendarioAutonomo.aspx">
+                        <img src="../img/glyphicons_045_calendar.png" alt="mmu10" />
+                        <%--<i class="icon-calendar"></i>--%>
+                        <span>Calendario</span>
+                    </a>
+                </li>
+
+              <%--  <li>
+                    <a href="gallery.html">
+                        <i class="icon-picture"></i>
+                        <span>desativado</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="grid.html">
+                        <i class="icon-th"></i>
+                        <span>desativado</span>
+                    </a>
+                </li>--%>
+
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <img src="../img/glyphicons_057_history.png" alt="mmu11" />
+                        <%--<i class="icon-file"></i>--%>
+                        <span>Outras páginas</span>
+
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="../../Pricing.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Preços e pacotes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../../Index.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Página inicial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../../Login.aspx">
+                                <i class="icon-double-angle-right"></i>
+                                Login
+                            </a>
+                        </li>
+
+                     <%--   <li>
+                            <a href="error-404.html">
+                                <i class="icon-double-angle-right"></i>
+                                Destivado
+                            </a>
+                        </li>--%>
+
+                       
+                    </ul>
+                </li>
+            </ul>
+            <!--/.nav-list-->
+
+            <div id="sidebar-collapse">
+                <i class="icon-double-angle-left"></i>
+            </div>
+        </div>
+
+        <div id="main-content" class="clearfix">
+            <div id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <a>Bem vindo a administração de seu perfil!</a>
+                </ul>
+                <!--.breadcrumb-->
+
+              <%--  <div id="nav-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="Localizar ..." class="input-small search-query" id="nav-search-input" autocomplete="off" />
+                            <i class="icon-search" id="nav-search-icon"></i>
+                        </span>
+                </div>--%>
+                <!--#nav-search-->
+            </div>
+
+            <div id="page-content" class="clearfix">
+                <div class="page-header position-relative">
+                    <h1>Administre sua conta
+							<%--<small>
+                                <i class="icon-double-angle-right"></i>
+                                Common UI Features &amp; Elements
+                            </small>--%>
+                    </h1>
+                </div>
+                <!--/.page-header-->
+
+                <div class="row-fluid">
+                    <!--PAGE CONTENT BEGINS HERE-->
+
+                    <!--/row-->
+
+                    <!--/row-->
+
+                    <!--/row-->
+
+                    <!--/row-->
+
+                    <!--/row-->
+
+                    <!--/row-->
+
+                    <div class="row-fluid">
+                        
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    
+                    </div>
+
+                    <script type="text/javascript">
+                        var $assets = "img";//this will be used in gritter alerts containing images
+                    </script>
+
+                    <!--PAGE CONTENT ENDS HERE-->
+                </div>
+                <!--/row-->
+            </div>
+            <!--/#page-content-->
+
+            <!--/#ace-settings-container-->
+        </div>
+        <!--/#main-content-->
+   
+    <!--/.fluid-container#main-container-->
+
+    <!--basic scripts-->
+
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='../js/jquery.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!--page specific plugin scripts-->
+
+    <!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+   
+	
+
+	<script src="../js/chosen.jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script src="../js/jquery.easy-pie-chart.min.js"></script>
+    <script src="../js/jquery.gritter.min.js"></script>
+    <script src="../js/spin.min.js"></script>
+    <script src="../js/fullcalendar.min.js"></script>
+	<script src="../js/bootbox.min.js"></script>
+    <script src="../js/ace-elements.min.js"></script>
+	<script src="../js/ace.min.js"></script>
+    
+        
+   <!--pagina de cotação-->
+   
+ <script type="text/javascript" src="js/FormDinamico.js"></script>
+    <!--inline scripts related to this page-->
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('#accordion2').on('hide', function (e) {
+                $(e.target).prev().children(0).addClass('collapsed');
+            })
+            $('#accordion2').on('hidden', function (e) {
+                $(e.target).prev().children(0).addClass('collapsed');
+            })
+            $('#accordion2').on('show', function (e) {
+                $(e.target).prev().children(0).removeClass('collapsed');
+            })
+            $('#accordion2').on('shown', function (e) {
+                $(e.target).prev().children(0).removeClass('collapsed');
+            })
+
+
+            var oldie = $.browser.msie && $.browser.version < 9;
+            $('.easy-pie-chart.percentage').each(function () {
+                $(this).easyPieChart({
+                    barColor: $(this).data('color'),
+                    trackColor: '#EEEEEE',
+                    scaleColor: false,
+                    lineCap: 'butt',
+                    lineWidth: 8,
+                    animate: oldie ? false : 1000,
+                    size: 75
+                }).css('color', $(this).data('color'));
+            });
+
+            $('[data-rel=tooltip]').tooltip();
+            $('[data-rel=popover]').popover({ html: true });
+
+
+            $('#gritter-regular').click(function () {
+                $.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+                    image: $assets + '/avatars/avatar1.png',
+                    sticky: false,
+                    time: '',
+                    class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+                });
+
+                return false;
+            });
+
+            $('#gritter-sticky').click(function () {
+                var unique_id = $.gritter.add({
+                    title: 'This is a sticky notice!',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+                    image: $assets + '/avatar.png',
+                    sticky: true,
+                    time: '',
+                    class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+                });
+
+                return false;
+            });
+
+
+            $('#gritter-without-image').click(function () {
+                $.gritter.add({
+                    // (string | mandatory) the heading of the notification
+                    title: 'This is a notice without an image!',
+                    // (string | mandatory) the text inside the notification
+                    text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+                    class_name: 'gritter-success' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+                });
+
+                return false;
+            });
+
+
+            $('#gritter-max3').click(function () {
+                $.gritter.add({
+                    title: 'This is a notice with a max of 3 on screen at one time!',
+                    text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+                    image: $assets + '/avatars/avatar3.png',
+                    sticky: false,
+                    before_open: function () {
+                        if ($('.gritter-item-wrapper').length >= 3) {
+                            return false;
+                        }
+                    },
+                    class_name: 'gritter-warning' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+                });
+
+                return false;
+            });
+
+
+            $('#gritter-error').click(function () {
+                $.gritter.add({
+                    title: 'This is a warning notification',
+                    text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+                    class_name: 'gritter-error' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+                });
+
+                return false;
+            });
+
+
+            $("#gritter-remove").click(function () {
+                $.gritter.removeAll();
+                return false;
+            });
+
+
+            ///////
+
+
+            $("#bootbox-regular").on('click', function () {
+                bootbox.prompt("What is your name?", function (result) {
+                    if (result === null) {
+                        //Example.show("Prompt dismissed");
+                    } else {
+                        //Example.show("Hi <b>"+result+"</b>");
+                    }
+                });
+            });
+
+            $("#bootbox-confirm").on('click', function () {
+                bootbox.confirm("Are you sure?", function (result) {
+                    if (result) {
+                        bootbox.alert("You are sure!");
+                    }
+                });
+            });
+
+            $("#bootbox-options").on('click', function () {
+                bootbox.dialog("I am a custom dialog with smaller buttons", [{
+                    "label": "Success!",
+                    "class": "btn-small btn-success",
+                    "callback": function () {
+                        //Example.show("great success");
+                    }
+                }, {
+                    "label": "Danger!",
+                    "class": "btn-small btn-danger",
+                    "callback": function () {
+                        //Example.show("uh oh, look out!");
+                    }
+                }, {
+                    "label": "Click ME!",
+                    "class": "btn-small btn-primary",
+                    "callback": function () {
+                        //Example.show("Primary button");
+                    }
+                }, {
+                    "label": "Just a button...",
+                    "class": "btn-small"
+                }]
+                );
+            });
+
+
+
+            $('#spinner-opts small').css({ display: 'inline-block', width: '60px' })
+
+            var slide_styles = ['', 'green', 'red', 'purple', 'orange', 'dark'];
+            var ii = 0;
+            $("#spinner-opts input[type=text]").each(function () {
+                var $this = $(this);
+                $this.hide().after('<span />');
+                $this.next().addClass('ui-slider-small').
+                addClass("inline ui-slider-" + slide_styles[ii++ % slide_styles.length]).
+                css({ 'width': '125px' }).slider({
+                    value: parseInt($this.val()),
+                    range: "min",
+                    animate: true,
+                    min: parseInt($this.data('min')),
+                    max: parseInt($this.data('max')),
+                    step: parseFloat($this.data('step')),
+                    slide: function (event, ui) {
+                        $this.attr('value', ui.value);
+                        spinner_update();
+                    }
+                });
+            });
+
+
+
+
+
+            $.fn.spin = function (opts) {
+                this.each(function () {
+                    var $this = $(this),
+                        data = $this.data();
+
+                    if (data.spinner) {
+                        data.spinner.stop();
+                        delete data.spinner;
+                    }
+                    if (opts !== false) {
+                        data.spinner = new Spinner($.extend({ color: $this.css('color') }, opts)).spin(this);
+                    }
+                });
+                return this;
+            };
+
+            function spinner_update() {
+                var opts = {};
+                $('#spinner-opts input[type=text]').each(function () {
+                    opts[this.name] = parseFloat(this.value);
+                });
+                $('#spinner-preview').spin(opts);
+            }
+
+
+
+            $('#id-pills-stacked').removeAttr('checked').change(function () {
+                $('.nav-pills').toggleClass('nav-stacked');
+            });
+
+
+        });
+    </script>
+    
+   <%-- <!--basic scripts calendário-->
+
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+		    window.jQuery || document.write("<script src='js/jquery.min.js'>" + "<" + "/script>");
+		</script>
+		<script src="js/bootstrap.min.js"></script>--%>
+
+		<!--page specific plugin scripts-->
+
+		
+		<!--inline scripts related to this page-->
+
+		<script type="text/javascript">
+		    $(function () {
+
+		        /* initialize the external events
+                    -----------------------------------------------------------------*/
+
+		        $('#external-events div.external-event').each(function () {
+
+		            // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+		            // it doesn't need to have a start or end
+		            var eventObject = {
+		                title: $.trim($(this).text()) // use the element's text as the event title
+		            };
+
+		            // store the Event Object in the DOM element so we can get to it later
+		            $(this).data('eventObject', eventObject);
+
+		            // make the event draggable using jQuery UI
+		            $(this).draggable({
+		                zIndex: 999,
+		                revert: true,      // will cause the event to go back to its
+		                revertDuration: 0  //  original position after the drag
+		            });
+
+		        });
+
+
+
+
+		        /* initialize the calendar
+                -----------------------------------------------------------------*/
+
+		        var date = new Date();
+		        var d = date.getDate();
+		        var m = date.getMonth();
+		        var y = date.getFullYear();
+
+
+		        var calendar = $('#calendar').fullCalendar({
+		            buttonText: {
+		                prev: '<i class="icon-chevron-left"></i>',
+		                next: '<i class="icon-chevron-right"></i>'
+		            },
+
+		            header: {
+		                left: 'prev,next today',
+		                center: 'title',
+		                right: 'month,agendaWeek,agendaDay'
+		            },
+		            events: [
+                    {
+                        title: 'Evento do dia',
+                        start: new Date(y, m, 1),
+                        className: 'label-important'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2),
+                        className: 'label-success'
+                    },
+                    {
+                        title: 'Some Event',
+                        start: new Date(y, m, d - 3, 16, 0),
+                        allDay: false
+                    }]
+                    ,
+		            editable: true,
+		            droppable: true, // this allows things to be dropped onto the calendar !!!
+		            drop: function (date, allDay) { // this function is called when something is dropped
+
+		                // retrieve the dropped element's stored Event Object
+		                var originalEventObject = $(this).data('eventObject');
+		                var $extraEventClass = $(this).attr('data-class');
+
+
+		                // we need to copy it, so that multiple events don't have a reference to the same object
+		                var copiedEventObject = $.extend({}, originalEventObject);
+
+		                // assign it the date that was reported
+		                copiedEventObject.start = date;
+		                copiedEventObject.allDay = allDay;
+		                if ($extraEventClass) copiedEventObject['className'] = [$extraEventClass];
+
+		                // render the event on the calendar
+		                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+		                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
+		                // is the "remove after drop" checkbox checked?
+		                if ($('#drop-remove').is(':checked')) {
+		                    // if so, remove the element from the "Draggable Events" list
+		                    $(this).remove();
+		                }
+
+		            }
+                    ,
+		            selectable: true,
+		            selectHelper: true,
+		            select: function (start, end, allDay) {
+
+		                bootbox.prompt("Título do evento:", function (title) {
+		                    if (title !== null) {
+		                        calendar.fullCalendar('renderEvent',
+                                    {
+                                        title: title,
+                                        start: start,
+                                        end: end,
+                                        allDay: allDay
+                                    },
+                                    true // make the event "stick"
+                                );
+		                    }
+		                });
+
+
+		                calendar.fullCalendar('unselect');
+
+		            }
+                    ,
+		            eventClick: function (calEvent, jsEvent, view) {
+
+		                var form = $("<form class='form-inline'><label>Alterar nome do evento &nbsp;</label></form>");
+		                form.append("<input autocomplete=off type=text value='" + calEvent.title + "' /> ");
+		                form.append("<button type='submit' class='btn btn-small btn-success'><i class='icon-ok'></i> Save</button>");
+
+		                var div = bootbox.dialog(form,
+                            [
+                            {
+                                "label": "<i class='icon-trash'></i> Excluir evento",
+                                "class": "btn-small btn-danger",
+                                "callback": function () {
+                                    calendar.fullCalendar('removeEvents', function (ev) {
+                                        return (ev._id == calEvent._id);
+                                    })
+                                }
+                            }
+                            ,
+                            {
+                                "label": "<i class='icon-remove'></i> Fechar",
+                                "class": "btn-small"
+                            }
+                            ]
+                            ,
+                            {
+                                // prompts need a few extra options
+                                "onEscape": function () { div.modal("hide"); }
+                            }
+                        );
+
+		                form.on('submit', function () {
+		                    calEvent.title = form.find("input[type=text]").val();
+		                    calendar.fullCalendar('updateEvent', calEvent);
+		                    div.modal("hide");
+		                    return false;
+		                });
+
+
+		                //console.log(calEvent.id);
+		                //console.log(jsEvent);
+		                //console.log(view);
+
+		                // change the border color just for fun
+		                //$(this).css('border-color', 'red');
+
+		            }
+
+		        });
+
+
+		    })
+		</script>
+	
+   
+    
+    
+    
+    </form>
+</body>
+</html>
